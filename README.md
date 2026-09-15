@@ -412,6 +412,8 @@ Raw manufacturer PDFs and model files are ignored by Git by default. Before publ
 - [Chinese introduction](docs/README_zh.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Adding a device](docs/ADDING_A_DEVICE.md)
+- [Fleet onboarding workflow](docs/FLEET_ONBOARDING.md)
+- [Agent execution rules](AGENTS.md)
 - [Data governance](docs/DATA_GOVERNANCE.md)
 - [C2M0025120D dataset card](docs/C2M0025120D_DATASET.md)
 - [Contributing](CONTRIBUTING.md)
