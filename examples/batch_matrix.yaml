@@ -1,0 +1,23 @@
+schema_version: 1
+devices: [C2M0025120D]
+models: [M0]
+grid:
+  vdc_V: [600, 800]
+  id_A: [25, 40, 50]
+  tj_C: [25, 125]
+  rg_on_ohm: [2.5]
+  rg_off_ohm: [2.5]
+  vg_on_V: [20]
+  vg_off_V: [-5]
+  fsw_Hz: [100000]
+parasitics:
+  r_driver_on_ohm: 0.5
+  r_driver_off_ohm: 0.5
+  lg_H: 5.0e-9
+  ls_H: 5.0e-9
+  lloop_H: 20.0e-9
+  rloop_ohm: 0.05
+  loop_loss_fraction: 0.25
+options:
+  convergence_check: false
+

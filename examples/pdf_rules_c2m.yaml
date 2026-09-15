@@ -1,0 +1,42 @@
+schema_version: 1
+rules:
+  - name: VDS_rated
+    pattern: "Drain-Source Breakdown Voltage\\s+V\\s+(?P<value>[0-9]+)"
+    unit: V
+    min_value: 600
+    max_value: 2000
+    confidence: 0.98
+  - name: RDS_on_typ_150C
+    pattern: "Drain-Source On-State Resistance R mΩ DS\\(on\\)[^0-9]+(?P<value>[0-9.]+)"
+    unit: ohm
+    scale: 0.001
+    min_value: 0.001
+    max_value: 1.0
+    confidence: 0.95
+    conditions: {tj_C: 150, id_A: 50, vgs_V: 20}
+  - name: Eon_body_ref
+    pattern: "Turn-On Switching Energy \\(Body Diode\\) E on[^0-9]+(?P<value>[0-9.]+)"
+    unit: mJ
+    min_value: 0.01
+    max_value: 20
+    confidence: 0.95
+    conditions: {vdc_V: 800, id_A: 50, tj_C: 25, rg_ohm: 2.5}
+  - name: Eoff_body_ref
+    pattern: "Turn Off Switching Energy \\(+Body Diode\\) E off[^0-9]+(?P<value>[0-9.]+)"
+    unit: mJ
+    min_value: 0.01
+    max_value: 20
+    confidence: 0.9
+    conditions: {vdc_V: 800, id_A: 50, tj_C: 25, rg_ohm: 2.5}
+  - name: Qgd
+    pattern: "Gate to Drain Charge Q[^0-9]+(?P<value>[0-9.]+)"
+    unit: nC
+    min_value: 1
+    max_value: 1000
+    confidence: 0.95
+  - name: Qg_total
+    pattern: "Total Gate Charge Q[^0-9]+(?P<value>[0-9.]+)"
+    unit: nC
+    min_value: 1
+    max_value: 2000
+    confidence: 0.95

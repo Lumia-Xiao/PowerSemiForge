@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "powersemiforge"
+version = "0.1.0"
+description = "Datasheet-to-simulation pipeline for power semiconductor devices"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "PowerSemiForge contributors"}]
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.0", "pandas>=2.0", "scipy>=1.12", "PyYAML>=6.0", "matplotlib>=3.8"]
+keywords = ["power-electronics", "semiconductor", "datasheet", "mosfet", "switching-loss"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+pdf = ["pdfplumber>=0.11", "pypdf>=5.0"]
+dev = ["build>=1.2", "twine>=5.0"]
+
+[project.scripts]
+switching-loss = "switching_loss_engine.cli:main"
+psforge = "powersemiforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+powersemiforge = [
+  "schemas/*.json",
+  "device_library/**/*.yaml",
+  "device_library/**/*.csv",
+  "device_library/**/*.json",
+  "device_library/**/.gitkeep",
+]

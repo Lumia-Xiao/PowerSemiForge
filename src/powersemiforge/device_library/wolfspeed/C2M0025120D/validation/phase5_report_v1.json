@@ -1,0 +1,123 @@
+{
+  "status": "COMPLETE_WITH_EVIDENCE_LIMITATION",
+  "model": "M3:m3_phase5_xml_shape_v1",
+  "evaluation": {
+    "dataset_id": "phase5_xml_holdout_v1",
+    "source": "manufacturer_models/C2M0025120D.xml",
+    "holdout_count": 2,
+    "calibration_count": 5,
+    "eon": {
+      "mae_J": 7.745748523260731e-05,
+      "rmse_J": 7.909780152831236e-05,
+      "mape_pct": 6.084299702987761,
+      "p90_ape_pct": 6.594824652192595,
+      "max_ape_pct": 6.722455889493803
+    },
+    "eoff": {
+      "mae_J": 1.8283893047230134e-05,
+      "rmse_J": 1.8440516198308873e-05,
+      "mape_pct": 9.552116343141332,
+      "p90_ape_pct": 9.707672441534612,
+      "max_ape_pct": 9.746561466132931
+    },
+    "rows": [
+      {
+        "split": "calibration",
+        "id_A": 12.56,
+        "tj_C": 25,
+        "eon_J": 0.000371,
+        "eoff_J": 7.008e-05,
+        "pred_eon_J": 0.0003710000000000001,
+        "pred_eoff_J": 7.008e-05,
+        "ape_eon_pct": 1.4611889117055316e-14,
+        "ape_eoff_pct": 0.0
+      },
+      {
+        "split": "calibration",
+        "id_A": 48.07,
+        "tj_C": 25,
+        "eon_J": 0.001567,
+        "eoff_J": 0.00021448,
+        "pred_eon_J": 0.0015670000000000003,
+        "pred_eoff_J": 0.00021447999999999997,
+        "ape_eon_pct": 1.3837934556292334e-14,
+        "ape_eoff_pct": 1.263756728465946e-14
+      },
+      {
+        "split": "calibration",
+        "id_A": 48.07,
+        "tj_C": 125,
+        "eon_J": 0.0019318,
+        "eoff_J": 0.0002681,
+        "pred_eon_J": 0.0019318000000000002,
+        "pred_eoff_J": 0.0002681,
+        "ape_eon_pct": 1.1224786960197788e-14,
+        "ape_eoff_pct": 0.0
+      },
+      {
+        "split": "calibration",
+        "id_A": 25.1,
+        "tj_C": 25,
+        "eon_J": 0.000657,
+        "eoff_J": 9.712e-05,
+        "pred_eon_J": 0.0006570000000000001,
+        "pred_eoff_J": 9.711999999999998e-05,
+        "ape_eon_pct": 1.6502316171773277e-14,
+        "ape_eoff_pct": 2.7908828575100502e-14
+      },
+      {
+        "split": "holdout",
+        "id_A": 36.71,
+        "tj_C": 25,
+        "eon_J": 0.001128,
+        "eoff_J": 0.00016976,
+        "pred_eon_J": 0.0010665675011340863,
+        "pred_eoff_J": 0.00015387441733667382,
+        "ape_eon_pct": 5.446143516481719,
+        "ape_eoff_pct": 9.357671220149733
+      },
+      {
+        "split": "calibration",
+        "id_A": 25.1,
+        "tj_C": 125,
+        "eon_J": 0.0009207,
+        "eoff_J": 0.0001214,
+        "pred_eon_J": 0.0007914447608904256,
+        "pred_eoff_J": 0.00012184236202861718,
+        "ape_eon_pct": 14.03880081563749,
+        "ape_eoff_pct": 0.3643838785973543
+      },
+      {
+        "split": "holdout",
+        "id_A": 36.71,
+        "tj_C": 125,
+        "eon_J": 0.0013906,
+        "eoff_J": 0.0002122,
+        "pred_eon_J": 0.0012971175284006993,
+        "pred_eoff_J": 0.00019151779656886592,
+        "ape_eon_pct": 6.722455889493803,
+        "ape_eoff_pct": 9.746561466132931
+      }
+    ]
+  },
+  "uncertainty": {
+    "samples": 12,
+    "seed": 20260914,
+    "eon_J": {
+      "mean": 0.0014838098835396809,
+      "p05": 0.0011407875466083383,
+      "p95": 0.001906609605269349
+    },
+    "eoff_J": {
+      "mean": 0.000212778436881136,
+      "p05": 0.00018351687473843937,
+      "p95": 0.0002519321010983006
+    },
+    "note": "Monte Carlo covers stated parasitic tolerances only; it is not total model-form uncertainty."
+  },
+  "limitations": [
+    "Calibration and holdout originate from the same manufacturer XML family.",
+    "No independent double-pulse measurements are available.",
+    "The manufacturer XML uses tabulated/formula loss data, not measured waveforms."
+  ]
+}

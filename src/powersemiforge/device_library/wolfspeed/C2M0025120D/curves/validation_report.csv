@@ -1,0 +1,25 @@
+check_id,source_figure,parameter,operating_point,extracted_value,reference_value,unit,abs_error,rel_error_pct,status,note
+Qg_endpoint,Fig.12,Qg,curve endpoint near VGS=20 V,194.3775,194,nC,0.3775004,0.19458784,PASS,Extracted endpoint VGS=19.963 V.
+Ciss_1000V,Fig.18,Ciss,VDS=1000 V,3129.148,3140,pF,-10.851968,-0.34560407,PASS,
+Coss_1000V,Fig.18,Coss,VDS=1000 V,224.01863,224,pF,0.018631003,0.008317412,PASS,
+Crss_1000V,Fig.18,Crss,VDS=1000 V,9.185714,9,pF,0.18571395,2.0634883,PASS,
+Eoss_1000V,Fig.16,Eoss,VDS=1000 V,126.77319,128,uJ,-1.2268066,-0.95844267,PASS,
+Vth_25C,Fig.11,VGS(th),Tj=25 C,2.6568213,2.6,V,0.056821325,2.1854356,PASS,
+Vth_150C,Fig.11,VGS(th),Tj=150 C,2.2952051,2.3,V,-0.0047949245,-0.20847498,PASS,
+Eon_table_vs_fig24,Fig.24,Eon (body diode),"VDD=800 V, IDS=50 A, Rg(ext)=2.5 ohm, Tj=25 C",1.6570791,2.18,mJ,-0.52292091,-23.987198,FAIL,Reference is the electrical-characteristics table; plot is preserved without forced correction.
+Eoff_table_vs_fig24,Fig.24,Eoff (body diode),"VDD=800 V, IDS=50 A, Rg(ext)=2.5 ohm, Tj=25 C",0.57357588,0.68,mJ,-0.10642412,-15.650605,FAIL,Reference is the electrical-characteristics table; plot is preserved without forced correction.
+Eon_table_vs_fig25,Fig.25,Eon (body diode),"VDD=800 V, IDS=50 A, Rg(ext)=2.5 ohm, Tj=25 C",0.79525569,2.18,mJ,-1.3847443,-63.520381,FAIL,Reference is the electrical-characteristics table; plot is preserved without forced correction.
+Eoff_table_vs_fig25,Fig.25,Eoff (body diode),"VDD=800 V, IDS=50 A, Rg(ext)=2.5 ohm, Tj=25 C",0.61964606,0.68,mJ,-0.060353944,-8.87558,WARN,Reference is the electrical-characteristics table; plot is preserved without forced correction.
+Eon_table_vs_fig26,Fig.26,Eon (body diode),"VDD=800 V, IDS=50 A, Rg(ext)=2.5 ohm, Tj=25 C",1.6978816,2.18,mJ,-0.48211838,-22.115522,FAIL,Reference is the electrical-characteristics table; plot is preserved without forced correction.
+Eoff_table_vs_fig26,Fig.26,Eoff (body diode),"VDD=800 V, IDS=50 A, Rg(ext)=2.5 ohm, Tj=25 C",0.59791054,0.68,mJ,-0.082089465,-12.07198,WARN,Reference is the electrical-characteristics table; plot is preserved without forced correction.
+Eon_schottky_25C,Fig.26,Eon (external SiC diode),"VDD=800 V, IDS=50 A, Rg(ext)=2.5 ohm, Tj=25 C",1.2213301,1.14,mJ,0.081330109,7.1342201,WARN,
+Eoff_schottky_25C,Fig.26,Eoff (external SiC diode),"VDD=800 V, IDS=50 A, Rg(ext)=2.5 ohm, Tj=25 C",0.68269251,0.8,mJ,-0.11730749,-14.663436,WARN,
+td_on_Rg2p5,Fig.27,td(on),Rg(ext)=2.5 ohm,15.353546,15,ns,0.35354576,2.3569717,PASS,
+tr_Rg2p5,Fig.27,tr,Rg(ext)=2.5 ohm,57.58148,58,ns,-0.41852042,-0.72158693,PASS,
+td_off_Rg2p5,Fig.27,td(off),Rg(ext)=2.5 ohm,32.798211,33,ns,-0.20178939,-0.61148298,PASS,
+tf_Rg2p5,Fig.27,tf,Rg(ext)=2.5 ohm,16.829214,17,ns,-0.17078611,-1.0046242,PASS,
+fig23__sum,Fig.23,Etotal consistency,x=50 in figure x-axis units,1.5454971,1.5527294,mJ,-0.0072323225,-0.46578124,PASS,"Reference here is digitized Eon+Eoff from the same figure, not the datasheet table."
+fig24__sum,Fig.24,Etotal consistency,x=50 in figure x-axis units,2.2315399,2.230655,mJ,0.00088491776,0.039670759,PASS,"Reference here is digitized Eon+Eoff from the same figure, not the datasheet table."
+fig25__sum,Fig.25,Etotal consistency,x=2.5 in figure x-axis units,2.3183308,1.4149017,mJ,0.9034291,63.851013,FAIL,"Reference here is digitized Eon+Eoff from the same figure, not the datasheet table."
+fig26_body_sum,Fig.26,Etotal consistency (body),x=25 in figure x-axis units,2.2957955,2.2957922,mJ,3.3028554e-06,0.00014386561,PASS,"Reference here is digitized Eon+Eoff from the same figure, not the datasheet table."
+fig26_schottky_sum,Fig.26,Etotal consistency (schottky),x=25 in figure x-axis units,1.907713,1.9040226,mJ,0.003690381,0.19382023,PASS,"Reference here is digitized Eon+Eoff from the same figure, not the datasheet table."

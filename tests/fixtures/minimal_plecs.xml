@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SemiconductorLibrary xmlns="http://www.plexim.com/xml/semiconductors/" version="1.4">
+  <Package class="MOSFET with Diode" vendor="ExampleVendor" partnumber="EXAMPLE1200">
+    <Variables>
+      <Variable><Name>Rgon</Name><DefaultValue>5</DefaultValue></Variable>
+      <Variable><Name>Rgoff</Name><DefaultValue>7.5</DefaultValue></Variable>
+    </Variables>
+    <SemiconductorData type="MOSFET with Diode">
+      <TurnOnLoss>
+        <Formula>E</Formula>
+        <CurrentAxis>0 10 20</CurrentAxis><VoltageAxis>0 800</VoltageAxis><TemperatureAxis>25 125</TemperatureAxis>
+        <Energy scale="0.001"><Temperature><Voltage>0 0 0</Voltage><Voltage>0 1 2</Voltage></Temperature></Energy>
+      </TurnOnLoss>
+      <TurnOffLoss>
+        <Formula>E</Formula>
+        <CurrentAxis>0 10 20</CurrentAxis><VoltageAxis>0 800</VoltageAxis><TemperatureAxis>25 125</TemperatureAxis>
+        <Energy scale="0.001"><Temperature><Voltage>0 0 0</Voltage><Voltage>0 0.2 0.4</Voltage></Temperature></Energy>
+      </TurnOffLoss>
+    </SemiconductorData>
+  </Package>
+</SemiconductorLibrary>
+

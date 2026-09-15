@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "recorded_on": "2026-09-15",
+  "input_archive": "C2M0025120D_M0_M3_python_code.zip",
+  "sha256": "488EB69FD0A4A9B428B1D105BD4700844F49F9A222D271D329CC589A10D6DBCA",
+  "environment": {
+    "python": "3.10.11",
+    "seed_test": "passed"
+  },
+  "reference_operating_point": {
+    "vdc_V": 800.0,
+    "id_A": 50.0,
+    "tj_C": 25.0,
+    "rg_on_ohm": 2.5,
+    "rg_off_ohm": 2.5
+  },
+  "prototype_raw_energy_J": {
+    "M1": {"eon": 0.0013941310609669113, "eoff": 0.0008110352213704897},
+    "M2": {"eon": 0.0015083204815017875, "eoff": 0.001025139177141321},
+    "M3": {"eon": 0.0025420340814681242, "eoff": 0.0007095659994174606}
+  },
+  "datasheet_table_target_J": {"eon": 0.00218, "eoff": 0.00068}
+}
+

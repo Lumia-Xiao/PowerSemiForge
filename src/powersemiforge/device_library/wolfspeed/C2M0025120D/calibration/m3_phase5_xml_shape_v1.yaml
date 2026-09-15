@@ -1,0 +1,23 @@
+profile_id: m3_phase5_xml_shape_v1
+version: 1
+device_id: C2M0025120D
+model: M3
+scale_on: 0.5439012604661245
+scale_off: 0.25177451612294977
+reference: {vdc_V: 800, id_A: 48.07, tj_C: 25, rg_on_ohm: 5, rg_off_ohm: 5, eon_J: 0.001567, eoff_J: 0.00021448}
+reference_parasitics: {r_driver_on_ohm: 0.5, r_driver_off_ohm: 0.5, lg_H: 5.0e-9, ls_H: 5.0e-9, lloop_H: 20.0e-9, rloop_ohm: 0.05, loop_loss_fraction: 0.25}
+current_correction:
+  x: [12.56, 25.10, 48.07]
+  eon: [0.8174224967243285, 0.8091725679755742, 1.0]
+  eoff: [1.7292737406558796, 1.0603619027472493, 1.0]
+temperature_correction:
+  x: [25.0, 125.0]
+  eon: [1.0, 1.364419748115246]
+  eoff: [1.0, 1.158762498099003]
+source:
+  kind: manufacturer_xml
+  xml: ../manufacturer_models/C2M0025120D.xml
+  method: endpoint shape correction identified once at nominal parasitics; no runtime refit
+metadata:
+  calibration_points: ["800V/12.56A/25C/Rg5", "800V/25.1A/25C/Rg5", "800V/48.07A/25C/Rg5", "800V/48.07A/125C/Rg5"]
+  holdout_policy: 36.71A at 25C and 125C is excluded from fitting

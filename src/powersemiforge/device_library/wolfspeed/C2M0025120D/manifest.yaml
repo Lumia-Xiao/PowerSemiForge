@@ -1,0 +1,35 @@
+schema_version: 1
+device_id: C2M0025120D
+vendor: Wolfspeed
+part_number: C2M0025120D
+technology: SiC MOSFET
+voltage_rating_V: 1200
+data_sources:
+  datasheet: C2M0025120D datasheet Rev. C
+  xml: manufacturer_models/C2M0025120D.xml
+  original_archive_sha256: 488EB69FD0A4A9B428B1D105BD4700844F49F9A222D271D329CC589A10D6DBCA
+curves:
+  transfer: curves/Fig07_transfer_characteristics.csv
+  threshold_temperature: curves/Fig11_threshold_voltage_vs_temperature.csv
+  gate_charge: curves/Fig12_gate_charge_characteristics.csv
+  eoss: curves/Fig16_output_capacitor_stored_energy.csv
+  capacitance_low_voltage: curves/Fig17_capacitances_vs_VDS_0_200V.csv
+  capacitance_full_voltage: curves/Fig18_capacitances_vs_VDS_0_1200V.csv
+  energy_600V: curves/Fig23_switching_energy_vs_IDS_600V.csv
+  energy_800V: curves/Fig24_switching_energy_vs_IDS_800V.csv
+  energy_gate_resistance: curves/Fig25_switching_energy_vs_Rg.csv
+  energy_temperature: curves/Fig26_switching_energy_vs_Tj.csv
+  switching_time_gate_resistance: curves/Fig27_switching_times_vs_Rg.csv
+calibrations:
+  M0: null
+  M1: m1_reference_v1
+  M2: m2_reference_v1
+  M3: m3_phase5_xml_shape_v1
+supported_domain:
+  vdc_V: [100, 1200]
+  id_A: [5, 100]
+  tj_C: [-55, 150]
+notes:
+  - M0 voltage-current surface is restricted to 600-800 V and the overlapping digitized current range.
+  - M1-M3 extrapolation outside digitized curve ranges is model-based and reported as a warning.
+

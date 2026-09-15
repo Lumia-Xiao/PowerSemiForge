@@ -1,0 +1,10 @@
+profile_id: m2_reference_v1
+version: 1
+device_id: C2M0025120D
+model: M2
+scale_on: 1.4453161822939926
+scale_off: 0.6633245662274191
+reference: {vdc_V: 800, id_A: 50, tj_C: 25, rg_on_ohm: 2.5, rg_off_ohm: 2.5, eon_J: 0.00218, eoff_J: 0.00068}
+reference_parasitics: {r_driver_on_ohm: 0.5, r_driver_off_ohm: 0.5, lg_H: 5.0e-9, ls_H: 5.0e-9, lloop_H: 20.0e-9, rloop_ohm: 0.05, loop_loss_fraction: 0.25}
+source: {kind: datasheet_table, note: fixed reference scale; never refit at runtime}
+

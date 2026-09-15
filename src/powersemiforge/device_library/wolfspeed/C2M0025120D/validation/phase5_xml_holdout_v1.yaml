@@ -1,0 +1,15 @@
+dataset_id: phase5_xml_holdout_v1
+version: 1
+device_id: C2M0025120D
+source: manufacturer_models/C2M0025120D.xml
+source_kind: manufacturer_PLECS_XML
+conditions: {vdc_V: 800, rg_on_ohm: 5, rg_off_ohm: 5, vg_on_V: 20, vg_off_V: -5}
+split_policy: low-current anchors and reference endpoints are calibration; 36.71 A at both temperatures is holdout
+points:
+  - {split: calibration, id_A: 12.56, tj_C: 25, eon_J: 0.000371, eoff_J: 0.00007008}
+  - {split: calibration, id_A: 48.07, tj_C: 25, eon_J: 0.001567, eoff_J: 0.00021448}
+  - {split: calibration, id_A: 48.07, tj_C: 125, eon_J: 0.0019318, eoff_J: 0.0002681}
+  - {split: calibration, id_A: 25.10, tj_C: 25, eon_J: 0.000657, eoff_J: 0.00009712}
+  - {split: holdout, id_A: 36.71, tj_C: 25, eon_J: 0.001128, eoff_J: 0.00016976}
+  - {split: calibration, id_A: 25.10, tj_C: 125, eon_J: 0.0009207, eoff_J: 0.0001214}
+  - {split: holdout, id_A: 36.71, tj_C: 125, eon_J: 0.0013906, eoff_J: 0.0002122}
