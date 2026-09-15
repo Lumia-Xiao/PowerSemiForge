@@ -250,7 +250,7 @@ $$
 During turn-on current rise, the loop equation is approximated by
 
 $$
-V_{ds}=\operatorname{clip}\!\left(V_{dc}-R_{loop}I_D-L_{loop}\max(di_D/dt,0),V_{on},V_{dc}\right).
+V_{ds}=\mathrm{clip}\!\left(V_{dc}-R_{loop}I_D-L_{loop}\max(di_D/dt,0),V_{on},V_{dc}\right).
 $$
 
 Reverse recovery is a triangular current pulse with area $Q_{rr}$ and duration $t_{rr}$. During turn-off current fall,
